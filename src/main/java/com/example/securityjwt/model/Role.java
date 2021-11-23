@@ -10,9 +10,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Role {
-   @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   private Long id;
+
+   @Id @GeneratedValue(strategy = GenerationType.AUTO)
+   private Long Id;
    private String name;
 
 }

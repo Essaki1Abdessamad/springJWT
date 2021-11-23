@@ -13,13 +13,11 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String name;
-    private String userName;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long Id;
+    private String user;
+    private String username;
     private String password;
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<Role> roles = new ArrayList<>();
+    @ManyToMany(fetch=FetchType.EAGER)
+    private Collection<Role> roles = new ArrayList<Role>();
 }
